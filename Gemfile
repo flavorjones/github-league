@@ -20,3 +20,5 @@ end
 gem 'rails_12factor'
 
 gem 'haml'
+gem "omniauth-google-oauth2"
+gem "devise"
