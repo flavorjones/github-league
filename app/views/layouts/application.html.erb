@@ -5,8 +5,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <link rel="stylesheet" href="assets/pivotal-ui-rails.css">
-    <script src="assets/pivotal-ui.js"></script>
+
+    <%= stylesheet_link_tag 'pivotal-ui-rails' %>
+    <%= javascript_include_tag 'pivotal-ui' %>
   </head>
   <body>
     <div class="phxl pvm bg-glow">
@@ -16,7 +17,9 @@
       </h1>
     </div>
 
-    <%= yield %>
+    <div class="paxl">
+      <%= yield %>
+    </div>
 
   </body>
 </html>

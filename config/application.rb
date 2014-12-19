@@ -23,5 +23,6 @@ module GithubLeague
     # Pivotal UI
     config.assets.paths << Rails.root.join('vendor', 'assets', 'pui-v1.3.0', 'images')
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+    config.assets.precompile += %w( pivotal-ui-rails.css pivotal-ui.js )
   end
 end
