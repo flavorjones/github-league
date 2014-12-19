@@ -19,5 +19,9 @@ module GithubLeague
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # Pivotal UI
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'pui-v1.3.0', 'images')
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
   end
 end
