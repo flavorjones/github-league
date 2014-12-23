@@ -34,7 +34,7 @@
     </div>
 
     <div class="pane">
-      <div class="container">
+      <div class="container pan">
         <%- if notice.present? %>
           <div class="alert alert-success">
             <p class="em-high"><%= notice %></p>
@@ -46,7 +46,9 @@
             <p class="em-high"><%= alert %></p>
           </div>
         <%- end %>
+      </div>
 
+      <div class="container">
         <%= yield %>
       </div> 
    </div>
