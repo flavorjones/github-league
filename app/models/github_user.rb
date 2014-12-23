@@ -3,6 +3,7 @@ class GithubUser < ActiveRecord::Base
     create! do |user|
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
+      user.nickname = auth["info"]["nickname"]
     end
   end
 end

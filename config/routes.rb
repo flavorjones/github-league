@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root 'welcome#welcome'
   get 'welcome/welcome'
 
+  get "/auth/github/callback" => "sessions#create"
+  get "/signout" => "sessions#destroy", :as => :signout
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

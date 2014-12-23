@@ -1,2 +1,5 @@
-%div
-  Welcome.
+- if @current_github_user
+  %div
+    Welcome.
+- else
+  %div= link_to "Sign in with Github", "/auth/github", class: "btn btn-primary"

@@ -19,23 +19,11 @@ ActiveRecord::Schema.define(version: 20141223154150) do
   create_table "github_users", force: true do |t|
     t.string   "uid"
     t.string   "name"
+    t.string   "nickname"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "email",              default: "", null: false
-    t.string   "name",               default: "", null: false
-    t.string   "password",           default: "", null: false
-    t.integer  "sign_in_count",      default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "github_users", ["uid"], name: "index_github_users_on_uid", using: :btree
 
 end

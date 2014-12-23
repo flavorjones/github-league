@@ -10,12 +10,40 @@
     <%= javascript_include_tag 'pivotal-ui' %>
   </head>
   <body>
-    <div class="phxl pvm bg-glow">
-      <h2 class="type-neutral-11">
-        <span>GitHub</span>
-        <span class="em-max">League</span>
-      </h1>
+    <div class="pane bg-glow">
+      <div class="container pan">
+        <div class="row">
+          <div class="col-sm-16 txt-l">
+            <div class="h3 type-neutral-11 txt-l">
+              <span>GitHub</span>
+              <span class="em-max">League</span>
+            </div>
+          </div>
+          <div class="paxl col-sm-8 txt-r">
+            <div class="type-neutral-11">
+              <%- if @current_github_user %>
+                <%= @current_github_user.name %> (<%= @current_github_user.nickname %>) / <%= link_to "Sign out", signout_path, class: "link-inverse" %>
+              <%- else %>
+                <%= link_to "Sign in with Github", "/auth/github", class: "link-inverse" %>
+              <%- end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <%- if notice.present? %>
+      <div class="alert alert-success">
+        <p class="em-high"><%= notice %></p>
+      </div>
+    <%- end %>
+
+    <%- if alert.present? %>
+      <div class="alert alert-error">
+        <p class="em-high"><%= alert %></p>
+      </div>
+    <%- end %>
 
     <div class="paxl">
       <%= yield %>
