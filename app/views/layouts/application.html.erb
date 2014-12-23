@@ -33,21 +33,23 @@
 
     </div>
 
-    <%- if notice.present? %>
-      <div class="alert alert-success">
-        <p class="em-high"><%= notice %></p>
-      </div>
-    <%- end %>
+    <div class="pane">
+      <div class="container">
+        <%- if notice.present? %>
+          <div class="alert alert-success">
+            <p class="em-high"><%= notice %></p>
+          </div>
+        <%- end %>
 
-    <%- if alert.present? %>
-      <div class="alert alert-error">
-        <p class="em-high"><%= alert %></p>
-      </div>
-    <%- end %>
+        <%- if alert.present? %>
+          <div class="alert alert-error">
+            <p class="em-high"><%= alert %></p>
+          </div>
+        <%- end %>
 
-    <div class="paxl">
-      <%= yield %>
-    </div>
+        <%= yield %>
+      </div> 
+   </div>
 
   </body>
 </html>
