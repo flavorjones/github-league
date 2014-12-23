@@ -20,3 +20,4 @@ end
 gem 'rails_12factor'
 
 gem 'haml'
+gem 'omniauth-github'
