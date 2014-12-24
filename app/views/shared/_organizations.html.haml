@@ -1,0 +1,14 @@
+%h2 GitHub Organizations
+
+- if @organizations.empty?
+  %div You are not a member of any organizations.
+- else
+  %table.table.table-striped.gh-data
+    %tbody
+    %thead
+      - @organizations.each do |organization|
+        %tr
+          %td
+            %img.gh-avatar-sm{:src => organization.avatar_url}
+            %span.gh-name= link_to organization.login, organization.html_url
+            %span= link_to "api", organization.api_url

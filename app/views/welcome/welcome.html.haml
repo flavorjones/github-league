@@ -1,5 +1,4 @@
 - if @current_github_user
-  %div
-    Welcome.
+  %div= render "shared/organizations"
 - else
   %div= link_to "Sign in with Github", "/auth/github", class: "btn btn-primary"

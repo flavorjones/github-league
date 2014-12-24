@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+.gh-avatar-sm {
+   width: 20px ;
+   height: 20px ;
+}
+
+.gh-name {
+   font-weight: bold ;
+}
+
+.gh-data {
+   font-size: 13px ;
+}
