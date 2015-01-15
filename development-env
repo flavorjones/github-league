@@ -1,4 +1,0 @@
-# -*- sh -*-
-# dev environment!
-export GITHUB_KEY="0e18fb36e1822aa668a5"
-export GITHUB_SECRET="708b46f0b4ae0ea53994c20a3e3c381e329a58d4"
