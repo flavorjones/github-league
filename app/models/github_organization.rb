@@ -2,6 +2,7 @@ class GithubOrganization < GithubApi
   attr_reader :properties
 
   def self.all github_user
+    return [] if github_user.nil?
     JSON.parse(get(github_user, "/user/orgs")).collect do |org|
       GithubOrganization.new(github_user, org)
     end
