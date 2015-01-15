@@ -16,13 +16,13 @@ ActiveRecord::Schema.define(version: 20141223171707) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "github_users", force: true do |t|
-    t.string   "uid"
-    t.string   "name"
-    t.string   "nickname"
+  create_table "github_users", force: :cascade do |t|
+    t.string   "uid",        limit: 255
+    t.string   "name",       limit: 255
+    t.string   "nickname",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "token"
+    t.string   "token",      limit: 255
   end
 
   add_index "github_users", ["uid"], name: "index_github_users_on_uid", using: :btree
